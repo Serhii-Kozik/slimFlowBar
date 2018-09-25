@@ -1,0 +1,135 @@
+/*STYLES FOR THE FLOW PROGRESS BAR*/
+/*GENERAL STYLES*/
+.flow-progress-bar {
+
+    align-items: stretch;
+    font-family: "DINRoundOT";
+    height: 77px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    position: absolute;
+    top: 10px;
+    left: 22px;
+    width: 979px;
+    border: 2px solid #d7e8f0;
+}
+
+.flow-progress-bar ~ div {
+
+	margin-top: 28px!important;
+}
+
+.flow-progress-bar ~ div .widget_button {
+
+	margin-top: 22px;
+}
+
+.flow-progress-item {
+
+	text-transform: uppercase;
+    flex: 1;
+    position:relative;
+    border-right:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1px;
+}
+/*Arrow styles*/
+.flow-progress-item:before {
+
+	content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 40px solid transparent;
+	border-bottom: 40px solid transparent;
+	border-left: 20px solid #d7e8f0;
+	position: absolute;
+	top: 50%;
+	margin-top: -40px;
+	margin-left: 1px;
+	left: 100%;
+	z-index: 3;
+}
+.flow-progress-item:after {
+
+	content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 38px solid transparent;
+	border-bottom: 38px solid transparent;
+	border-left: 19px solid white;
+	position: absolute;
+	top: 50%;
+	margin-top: -38px;
+	left: 100%;
+	z-index: 3;
+}
+
+.flow-progress-item:last-child:before,
+.flow-progress-item:last-child:after {
+
+	display: none;
+}
+
+.flow-progress-item span {
+
+    padding-left: 19px;
+}
+
+.flow-active-step{
+
+	background: #394259;
+	color:#ffffff;
+}
+.flow-active-step:after{
+
+	border-left: 19px solid #394259;
+}
+
+/*Customization of flow-370 progress Bar*/
+.flow-370-bar .flow-progress-item span {
+
+	margin-top: -7px;
+}
+.flow-370-bar .flow-progress-item.item-name {
+
+	max-width: 157px;
+
+}
+.flow-370-bar .flow-progress-item.item-dob {
+
+	max-width: 199px;
+}
+.flow-370-bar .flow-progress-item.item-dob span {
+
+	padding-left: 26px;
+}
+.flow-370-bar .flow-progress-item.item-address {
+
+	max-width: 181px;
+}
+.flow-370-bar .flow-progress-item.item-address span {
+
+	padding-left: 35px;
+}
+.flow-370-bar .flow-progress-item.item-gender {
+
+	    max-width: 170px;
+}
+.flow-370-bar .flow-progress-item.item-gender span {
+
+	padding-left: 32px;
+}
+
+.flow-370-bar .flow-progress-item.item-terms span {
+	
+	padding-left: 23px;
+}
+.with-flow-progress-bar #sliderFrame > div {
+
+    top: 38px!important;
+}
