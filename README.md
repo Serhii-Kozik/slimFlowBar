@@ -20,9 +20,9 @@ The widget files flowProgressBar.js and flowProgressBar.css should be placed in 
 
 To initiate a new Bar instance in the flow file follow next guide:
 
-1. - define the progress steps you need by defining the variable:
+1. - define the progress steps you need by defining the variable
  
-           ```php
+```php
            let flowXXXProgressSteps = {
            "name": "name",
            "dob": "date of birth",
@@ -30,13 +30,13 @@ To initiate a new Bar instance in the flow file follow next guide:
            "gender": "gender",
            "terms": "terms & conditions"
        };
-       ```
+```
         
 2. - initiate the progress bar instance
  
-       ```php
+```php
        var flowProgressBar = new FlowProgressBar(null,'flowXXX-progress-bar',flowXXXProgressSteps,'flow-XXX-bar');
-       ```
+```
  
        XXX change to the flow number
 
@@ -47,7 +47,7 @@ To initiate a new Bar instance in the flow file follow next guide:
         param 3 - progressSteps - object contains step keys and step labels
            example
             
-                   ```php
+```php
                    progressSteps= {
                                   "name": "name",
                                    "dob": "date of birth",
@@ -55,14 +55,14 @@ To initiate a new Bar instance in the flow file follow next guide:
                                    "gender": "gender",
                                    "terms": "terms & conditions"
                                    };
-                ```
+```
  
         param 4 - barName - string (no spaces) contains the name for the instance of the progress bar,
                   needed to be able to apply individual styling.
 
 3. - Add the following code to the "onready" declaration of the flow slides you want to be included in the progress bar, the '--STEP-KEY--' you provide will set current slide to the step with the key.
  
- ```php
+```php
  //Insert Flow progress bar to the slide page
  
 onready: function(){
@@ -90,8 +90,8 @@ onready: function(){
 
  Use .with-flow-progress-bar as parent selector, like
  
-  ```css
+```css
   .with-flow-progress-bar .anyElenentClass
-  ```
+```
  
 In this case, styling will be applied to the pages with "Flow Progress bar" only;
