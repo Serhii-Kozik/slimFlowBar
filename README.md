@@ -54,14 +54,14 @@ To initiate a new Bar instance in the flow file follow next guide:
 
 3. - Add the following code to the "onready" declaration of the flow slides you want to be included in the progress bar, the '--STEP-KEY--' you provide will set current slide to the step with the key.
 
+ //Insert Flow progress bar to the slide page
+ 
 onready: function(){
-                   //Insert Flow progress bar to the slide page
-
                    flowProgressBar.addProgressBarToPage(App.Controller.current_page.container);
                    flowProgressBar.setActiveStep('--STEP-KEY--');
-
-                   //==========================================
                },
+               
+//==========================================
 
  replace --STEP-KEY-- with desired step key.
 
