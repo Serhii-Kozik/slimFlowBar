@@ -41,6 +41,7 @@ To initiate a new Bar instance in the flow file follow next guide:
         param 2 - unique identifier, the widget Abstract needs this.
         param 3 - progressSteps - object contains step keys and step labels
            example
+           <code>
                    progressSteps= {
                                   "name": "name",
                                    "dob": "date of birth",
@@ -48,12 +49,12 @@ To initiate a new Bar instance in the flow file follow next guide:
                                    "gender": "gender",
                                    "terms": "terms & conditions"
                                    };
-
+</code>
         param 4 - barName - string (no spaces) contains the name for the instance of the progress bar,
                   needed to be able to apply individual styling.
 
 3. - Add the following code to the "onready" declaration of the flow slides you want to be included in the progress bar, the '--STEP-KEY--' you provide will set current slide to the step with the key.
-
+<code>
  //Insert Flow progress bar to the slide page
  
 onready: function(){
@@ -62,7 +63,7 @@ onready: function(){
                },
                
 //==========================================
-
+</code>
  replace --STEP-KEY-- with desired step key.
 
  After this tree steps, your flow has "Flow Progress bar" integrated.
