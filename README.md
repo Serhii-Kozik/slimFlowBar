@@ -37,7 +37,7 @@ To initiate a new Bar instance in the flow file follow next guide:
 ```php
        var flowProgressBar = new FlowProgressBar(null,'flowXXX-progress-bar',flowXXXProgressSteps,'flow-XXX-bar');
 ```
- 
+
        XXX change to the flow number
 
       Parameters description
@@ -46,6 +46,7 @@ To initiate a new Bar instance in the flow file follow next guide:
         param 2 - unique identifier, the widget Abstract needs this.
         param 3 - progressSteps - object contains step keys and step labels
            example
+            
             
 ```php
                    progressSteps= {
@@ -56,7 +57,7 @@ To initiate a new Bar instance in the flow file follow next guide:
                                    "terms": "terms & conditions"
                                    };
 ```
- 
+
         param 4 - barName - string (no spaces) contains the name for the instance of the progress bar,
                   needed to be able to apply individual styling.
 
