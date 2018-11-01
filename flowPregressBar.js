@@ -1,9 +1,9 @@
 
 /**
- * The widget provides an ability to add a custom progress bar to the flow
- * The Bar acts as simple widget.
- * THe Bar is customizeble and you can set any number of steps
+ * The widget provides an ability to add a custom progress bar to any flow.
+ * The Bar is customizeble, you can set any number of steps
  * and stylize each instance individualy.
+ 
  * Parameters:
  *  1- parent ID - null the widget Abstract needs this.
  *  2- unique identifyer the widget Abstract needs this.
@@ -24,15 +24,15 @@
  *===============================================================
  *      //THE FLOW PROGRESS BAR INITIALIZATION
  *
- *           let flowXXXProgressSteps = {
- *           "name": "name",
- *           "dob": "date of birth",
- *           "address": "address",
- *           "gender": "gender",
- *           "terms": "terms & conditions"
- *       };
+ *     let flowXXXProgressSteps = {
+ *                                 "name": "name",
+ *                                 "dob": "date of birth",
+ *                                 "address": "address",
+ *                                 "gender": "gender",
+ *                                 "terms": "terms & conditions"
+ *                                };
  *
- *       var flowProgressBar = new FlowProgressBar(null,'flowXXX-progress-bar',flowXXXProgressSteps,'flow-XXX-bar');
+ *     var flowProgressBar = new FlowProgressBar(null,'flowXXX-progress-bar',flowXXXProgressSteps,'flow-XXX-bar');
  *================================================================
  *  XXX change to the flow number
  *
@@ -57,10 +57,12 @@
  * I this case the styles will apply only to the progress bar with the 'name'.
  *
  */
+
 function FlowProgressBar(parent, id, progressSteps={"stepone": "STEP One","steptwo": "STEP TWO"}, barName='')
 {
 
     var activeStep;
+    
     this.constructor = function()
     {
         var root    = document.createElement('DIV');
