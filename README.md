@@ -11,10 +11,10 @@ It has a nice arrow style and animation when the user switches between slides.
  
 The widget consists of the widget function JS file and CSS styles file. 
 
-
+```
 ProgressBarAnimation_2.0.js (flowXXX/widget/ProgressBarAnimation_2.0.js)
 ProgressBarAnimation_2.0.css (flowXXX/public/css-w/ProgressBarAnimation_2.0.css)
-
+```
 
 Widget function name  “ProgressBarAnimation”.
 ProgressBarAnimation function accepts 4 arguments:
@@ -62,13 +62,13 @@ flowXXX/widget/ProgressBarNavigator_0.1.js
 ## How to reuse Progress Bar Animation in 3 steps ##
 Make sure that the “Progress Bar Animation” files are in place.
 
-	flowXXX/widget/ProgressBarAnimation_2.0.js
+ flowXXX/widget/ProgressBarAnimation_2.0.js
  flowXXX/public/css-w/ProgressBarAnimation_2.0.css
 
 Define the progress steps and initiate the widget inside your flow module.
 	Example below shows initialization process in the registration flow    
 (flowXXX/module/registration.js)
-
+```
 /** Define progress steps*/
 let flowXXXProgressSteps = {
             "name"   : "name",
@@ -84,16 +84,16 @@ var progressBarAnimation = new ProgressBarAnimation(
                            flowXXXProgressSteps, //steps
                            'flow-xxx-bar' //name of instance      
                                );   
-
+```
 Assign flow slides to a progress steps by calling “addToSlide” and “setActiveStep” methods of ProgressBarAnimation instance inside “onready” statement of the slide. See example below.
-
+```
 onready: function(){
 //Insert ProgressBarAnimation to the slide page
 progressBarAnimation.addToSlide(App.Controller.current_page.container);
 progressBarAnimation.setActiveStep('step_id');
 //==========================================
 },
-
+```
 
 Change “step_id” to the actual "step id" defined in the flowXXXProgressSteps object. You can assign multiple slides to a single step.
 
@@ -111,21 +111,21 @@ CSS code in the ProgressBarAnimation_2.0.css file in “flowXXX/public/css-w/”
  .ProgressBarAnimationName .anyElementClass
 
  In this case, the styles will apply only to the progress bar with the name ProgressBarAnimationName.
-
+```
 .flow-xxx-bar .pba-progress-step.item-gender {
      z-index: 6;
 }
-
+```
 Also, you can change any styles on the page, where the progress bar is present.
 
- 	Use .with-pba as parent selector, like
+ Use .with-pba as parent selector, like
 
   .with-pba .anyElementClass
-
+```
 .with-pba #sliderFrame > div {
     top: 38px!important;
 }
-
+```
 In this case, styling will apply only  to the pages with "ProgressBarAnimation" widget;  
 
 ## Example of implementation ##
@@ -142,7 +142,7 @@ Let’s open the registration flow file.
 
 
 Now let’s initiate the widget instance for this flow by adding the following code at the top of the registration.js file.
-
+```
 //** ADD FLOW PROGRESS BAR */
 let flow370ProgressSteps = {
             "name": "name",
@@ -152,7 +152,7 @@ let flow370ProgressSteps = {
             "terms": "terms & conditions"
         };
  var progressBarAnimation = new ProgressBarAnimation(null,'flow370-progress-bar-animation',flow370ProgressSteps,'flow-370-bar');       
-
+```
 
 
 Now we have our plugin initiated, let’s add the slides to the progress steps.
@@ -160,21 +160,21 @@ Now we have our plugin initiated, let’s add the slides to the progress steps.
 For the “NAME” step we will assign FirstName and LastName slides. 
 For this, we should add the following code to the “onready” statement of each slide. 
 
-
+```
 //Insert Flow progress bar to the slide page
              progressBarAnimation.addToSlide(App.Controller.current_page.container);
 progressBarAnimation.setActiveStep('name');
 
 //==========================================
-
+```
 For the DATE OF BIRTH, we will assign BirthDate slide by adding following code to the “onready” statement of the slide.
-
+```
 onready: function(){
 //Insert Flow progress bar to the slide page               progressBarAnimation.addToSlide(App.Controller.current_page.container);
 progressBarAnimation.setActiveStep('dob');
 //==========================================
 },
-
+```
 
 
 
@@ -183,27 +183,27 @@ progressBarAnimation.setActiveStep('dob');
 For the “ADDRESS” step we will assign StreetName, StreetNrAndAddition, PostalCode, City' slides. 
 For this, we should add the following code to the “onready” statement of each mentioned slide. 
 
-                   
+```                   
 //Insert Flow progress bar to the slide page
 progressBarAnimation.addToSlide(App.Controller.current_page.container);
 progressBarAnimation.setActiveStep('address');
 //==========================================
-
+```
 For the “GENDER” we will assign “Gender” slide by adding the following code to the “onready” statement of the slide.
-
+```
 onready: function(){
 //Insert Flow progress bar to the slide page
 progressBarAnimation.addToSlide(App.Controller.current_page.container);
 progressBarAnimation.setActiveStep('gender');
 //==========================================
 },
-
+```
 For the “TERMS & CONDITIONS” step, we will assign TermsInfo and TermsAndConditions slides, by adding the following code to the “onready” statement of each slide. 
-
+```
 //Insert Flow progress bar to the slide page                progressBarAnimation.addToSlide(App.Controller.current_page.container);
 progressBarAnimation.setActiveStep('terms');
 //==========================================
-
+```
 Now we have the ProgressBarAnimation integrated into our registration flow.
 
 ## Release steps (5 min guide) ##
@@ -216,7 +216,7 @@ ProgressBarAnimation_2.0.css file flowXXX/public/css-w/ folder.
 
 
 Define progress steps and initiate the widget in the flow module file.
-	
+```	
 /** Define progress steps*/
 let flowXXXProgressSteps = {
             "name"   : "name",
@@ -231,10 +231,10 @@ var progressBarAnimation = new ProgressBarAnimation(
                            'flow-xxx-progress-bar-animation', //id
                            flowXXXProgressSteps, //steps
                            'flow-xxx-bar' //name of instance                                     );   
-
+```
 Assign slides to the defined steps by calling the widget methods addToSlide and setActiveStep inside the “onready” statement of the slide.
 
-
+```
 onready: function(){
 //Insert ProgressBarAnimation to the slide page
 progressBarAnimation.addToSlide(App.Controller.current_page.container);
@@ -242,3 +242,4 @@ progressBarAnimation.setActiveStep('step_id');
 //==========================================
 },
 
+```
