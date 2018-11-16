@@ -20,7 +20,8 @@
 	margin-top: 28px!important;
 }
 
-.flow-progress-bar ~ div .widget_button {
+.progressBarAnimation ~ div .widget_button[name="prev"],
+.progressBarAnimation ~ div .widget_button[name="next"] {
 
 	margin-top: 22px;
 }
